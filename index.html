@@ -23,9 +23,11 @@
 
 <script>
 function checkPass() {
-    let pass = document.getElementById("pass").value;
+    let passInput = document.getElementById("pass");
+    let pass = passInput.value.trim();
 
-    pass = pass.trim(); // removes spaces
+    // DEBUG (you can remove later)
+    console.log("Typed password:", pass);
 
     if (pass === "1405") {
         localStorage.setItem("loggedIn", "yes");
