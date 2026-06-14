@@ -36,7 +36,19 @@
 function checkPass() {
     let pass = document.getElementById("pass").value;
 
-    if (pass === "1405") {
+    if (pass === "joyiee") {
+        localStorage.setItem("loggedIn", "yes");
+        window.location.href = "welcome.html";
+    } else {
+        document.getElementById("error").innerText = "Wrong password 🖤";
+    }
+}
+</script><script>
+function checkPass() {
+    let pass = document.getElementById("pass").value;
+
+    if (pass === "joyiee") {
+        localStorage.setItem("loggedIn", "yes");
         window.location.href = "welcome.html";
     } else {
         document.getElementById("error").innerText = "Wrong password 🖤";
