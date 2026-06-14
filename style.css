@@ -1,0 +1,224 @@
+/* ===== VINTAGE BASE (FORCE BROWN THEME) ===== */
+
+body {
+    background-color: #8a5e1c !important;
+    color: #850b07 !important;
+    font-family: Ariel, serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+
+    background-image: radial-gradient(#e6d3b8 1px, transparent 1px);
+    background-size: 18px 18px;
+}
+
+/* NAV */
+nav {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #d6c2a8;
+    background: #f4e7d3;
+}
+
+nav a {
+    color: #3b241b !important;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #5a2a22 !important;
+}
+
+/* CONTENT BOX */
+.container {
+    max-width: 750px;
+    margin: 60px auto;
+    padding: 40px;
+
+    background: rgba(247, 247, 247);
+    border: 1px solid #d6c2a8;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-radius: 6px;
+
+    animation: fadeIn 1s ease;
+}
+
+/* HEADINGS */
+h1, h3 {
+    color: #5a2a22 !important;
+    font-weight: normal;
+}
+
+/* TEXT */
+p {
+    color: #3b241b !important;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+iframe {
+    border: 1px solid #d6c2a8;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.letter-card {
+    background: rgba(255, 248, 235, 0.8);
+    border: 1px solid #d6c2a8;
+    padding: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.letter-card:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 240, 220, 0.9);
+}
+
+/* POPUP (vintage letter opening effect) */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+	backdrop-filter: blur(3px);
+}
+
+.popup-content {
+    background: #f4e7d3;
+    padding: 40px;
+    max-width: 600px;
+    border: 1px solid #d6c2a8;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+    /* old paper opening effect */
+    transform: scale(0.7) rotateX(20deg);
+    opacity: 0;
+    animation: openPaper 0.5s ease forwards;
+}
+
+@keyframes openPaper {
+    0% {
+        transform: scale(0.7) rotateX(20deg);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.05) rotateX(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+.typewriter {
+    overflow: hidden;
+    white-space: pre-wrap;
+    border-right: 2px solid #5a2a22;
+    animation: blinkCursor 0.7s steps(1) infinite;
+}
+
+@keyframes blinkCursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.welcome-body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top, #f4e7d3, #e8d3b8);
+    overflow: hidden;
+}
+
+/* container */
+.welcome-container {
+    text-align: center;
+    max-width: 600px;
+    padding: 40px;
+}
+
+/* fade animation */
+.fade {
+    opacity: 0;
+    animation: fadeUp 1.5s ease forwards;
+}
+
+.fade1 { animation-delay: 0.5s; }
+.fade2 { animation-delay: 2s; }
+.fade3 { animation-delay: 3.5s; }
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* typewriter effect */
+.typewriter {
+    overflow: hidden;
+    border-right: 2px solid #5a2a22;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3s steps(40, end) forwards, blink 0.8s infinite;
+    margin: 20px auto;
+    color: #3b241b;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* button */
+button {
+    background: transparent;
+    color: #5a2a22;
+    border: 1px solid #5a2a22;
+    padding: 12px 30px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: 0.4s ease;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #5a2a22;
+    color: #fff;
+    transform: scale(1.08);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}

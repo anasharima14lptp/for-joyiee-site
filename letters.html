@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Letters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="letters.html">Letters</a>
+    <a href="memories.html">Memories</a>
+    <a href="playlist.html">Playlist</a>
+    <a href="surprises.html">Surprises</a>
+</nav>
+
+<div class="container">
+
+    <h1>Letters for Joyiee</h1>
+
+    <div class="divider"></div>
+
+    <p>Click a letter to open it:</p>
+
+    <!-- LETTER CARDS -->
+    <div class="letter-card" onclick="openLetter('Letter #1', 'Hi Joyiee, this is the first letter I saved here for you. I hope you smile reading this.')">
+        Letter #1 — The Beginning
+    </div>
+
+    <div class="letter-card" onclick="openLetter('Letter #2', 'There are moments in my day when I randomly think of you, and it always makes everything feel lighter.')">
+        Letter #2 — Random Thought
+    </div>
+
+    <div class="letter-card" onclick="openLetter('Letter #3', 'You matter to me more than I usually say. I just wanted you to know that.')">
+        Letter #3 — For You
+    </div>
+
+</div>
+
+<!-- POPUP CARD -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+
+        <h2 id="title"></h2>
+
+        <div class="divider"></div>
+
+        <p id="text"></p>
+
+        <button onclick="closeLetter()">Close</button>
+
+    </div>
+</div>
+
+<script>
+function openLetter(title, text) {
+    document.getElementById("title").innerText = title;
+    document.getElementById("text").innerText = text;
+    document.getElementById("popup").style.display = "flex";
+}
+
+function closeLetter() {
+    document.getElementById("popup").style.display = "none";
+}
+</script>
+
+</body>
+</html>

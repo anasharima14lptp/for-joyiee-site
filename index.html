@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For Someone Special</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="letters.html">Letters</a>
+    <a href="memories.html">Memories</a>
+    <a href="playlist.html">Playlist</a>
+    <a href="surprises.html">Surprises</a>
+</nav>
+
+<div class="container" style="text-align:center; margin-top:120px;">
+
+    <h1>Enter the code 🖤</h1>
+
+    <div class="divider"></div>
+
+    <input type="password" id="pass" placeholder="Password"
+        style="padding:10px; width:200px; border:1px solid #d6c2a8;">
+
+    <br><br>
+
+    <button onclick="checkPass()">Enter</button>
+
+    <p id="error" style="color:#5a2a22;"></p>
+
+</div>
+
+<script>
+function checkPass() {
+    let pass = document.getElementById("pass").value;
+
+    if (pass === "1405") {
+        window.location.href = "welcome.html";
+    } else {
+        document.getElementById("error").innerText = "Wrong password 🖤";
+    }
+}
+</script>
