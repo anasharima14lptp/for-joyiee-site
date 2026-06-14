@@ -13,19 +13,15 @@
 
     <div class="divider"></div>
 
-    <input type="password" id="pass" placeholder="Enter password">
-
-    <p id="error"></p>
-
-    <button onclick="checkPass()">Enter</button>
-
-</div>
+<input type="password" id="pass" placeholder="Enter password">
+<p id="error"></p>
+<button onclick="checkPass()">Enter</button>
 
 <script>
 function checkPass() {
     let pass = document.getElementById("pass").value;
 
-    if (pass === "1405") {
+    if (pass === "joyiee") {
         localStorage.setItem("loggedIn", "yes");
         window.location.href = "welcome.html";
     } else {
@@ -33,6 +29,3 @@ function checkPass() {
     }
 }
 </script>
-
-</body>
-</html>
