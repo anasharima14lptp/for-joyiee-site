@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome</title>
+    <title>For Someone Special</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div style="text-align:center; margin-top:150px;">
+<nav>
+    <a href="index.html">Home</a>
+    <a href="letters.html">Letters</a>
+    <a href="memories.html">Memories</a>
+    <a href="playlist.html">Playlist</a>
+    <a href="surprises.html">Surprises</a>
+</nav>
 
-    <h1>Hi Joyiee 🖤</h1>
+<div class="container" style="text-align:center; margin-top:120px;">
 
-    <p>I made something for you...</p>
+    <h1>Enter the code 🖤</h1>
 
-    <button onclick="go()">Step inside</button>
+    <div class="divider"></div>
+
+    <input type="password" id="pass" placeholder="Password"
+        style="padding:10px; width:200px; border:1px solid #d6c2a8;">
+
+    <br><br>
+
+    <button onclick="checkPass()">Enter</button>
+
+    <p id="error" style="color:#5a2a22;"></p>
 
 </div>
 
 <script>
-function go() {
-    window.location.href = "home.html";
+function checkPass() {
+    let pass = document.getElementById("pass").value;
+
+    if (pass === "1405") {
+	    window.location.href = "welcome.html";
+    } else {
+        document.getElementById("error").innerText = "Wrong password 🖤";
+    }
 }
 </script>
-
-</body>
-</html>
