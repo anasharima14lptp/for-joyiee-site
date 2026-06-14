@@ -7,6 +7,12 @@
 
 <body>
 
+<script>
+if (localStorage.getItem("loggedIn") !== "yes") {
+    window.location.href = "index.html";
+}
+</script>
+	
 <nav>
     <a href="home.html">Home</a>
     <a href="letters.html">Letters</a>
