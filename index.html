@@ -1,40 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>Welcome</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div style="text-align:center; margin-top:120px;">
+<div style="text-align:center; margin-top:150px;">
 
-    <h1>Enter the code 🖤</h1>
+    <h1>Hi Joyiee 🖤</h1>
 
-    <input type="password" id="pass" placeholder="Enter password">
+    <p>I made something for you...</p>
 
-    <p id="error" style="color:red;"></p>
-
-    <br>
-
-    <button onclick="checkPass()">Enter</button>
+    <button onclick="go()">Step inside</button>
 
 </div>
 
 <script>
-function checkPass() {
-    let passInput = document.getElementById("pass");
-    let pass = passInput.value.trim();
-
-    // DEBUG (you can remove later)
-    console.log("Typed password:", pass);
-
-    if (pass === "1405") {
-        localStorage.setItem("loggedIn", "yes");
-        window.location.href = "welcome.html";
-    } else {
-        document.getElementById("error").innerText = "Wrong password 🖤";
-    }
+function go() {
+    window.location.href = "home.html";
 }
 </script>
 
