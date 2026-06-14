@@ -5,20 +5,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="welcome-body">
 
-<div style="text-align:center; margin-top:150px;">
+<div class="welcome-container">
 
-    <h1>Hi Joyiee 🖤</h1>
+    <h1 class="fade fade1">Hi, Joyiee 🖤</h1>
 
-    <p>I made something for you...</p>
+    <p class="typewriter">
+        I made something small… just for you.
+    </p>
 
-    <button onclick="go()">Step inside</button>
+    <p class="fade fade2">
+        Take your time. No rush.
+    </p>
+
+   <button class="fade fade3" onclick="enterSite()">
+    Step inside 🖤
+</button>
 
 </div>
 
 <script>
-function go() {
+function enterSite() {
+    console.log("enter clicked");
     window.location.href = "home.html";
 }
 </script>
